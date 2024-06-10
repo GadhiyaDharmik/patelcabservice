@@ -195,10 +195,11 @@ h6 {
   transition: .3s;
   width: 100%;
   text-align: center;
+  font-size: 16px
 }
 
 .single-footer-widget .row {
-  gap: 1rem
+  gap: 40px
 }
 
 .single-footer-widget .row h6:hover {
