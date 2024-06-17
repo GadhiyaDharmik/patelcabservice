@@ -66,6 +66,80 @@
     #content {
       visibility: hidden;
     }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      /* width: 230px;
+      height: 280px;
+      max-height: 330px; */
+      background-color: var(--white);
+      border-radius: 10px;
+      box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+        -4px -4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+        -4px -4px 12px rgba(0, 0, 0, 0.08);
+
+      .card-image-container {
+        background-color: #fdc501;
+      }
+    }
+
+    .card-image-container {
+      width: 100%;
+      height: 64%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background-color: #efefef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .5s;
+    }
+
+    .image-icon {
+      font-size: 40px;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 17px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 600;
+      color: #212529;
+      cursor: default;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+    }
+
+    .card-des {
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      margin: 0;
+      font-size: 13px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      color: #212529;
+      cursor: default;
+    }
   </style>
 </head>
 
@@ -121,10 +195,9 @@
             <h2 class="text-white">Need a ride? just call</h2>
             <h1 class="text-uppercase">+91 98983-24155</h1>
             <p class="pt-10 pb-10 text-white">
-              Book Your Ride Today Ready to experience the best cab service in
-              Gujarat? Book your ride now through our easy-to-use online booking
-              system or call our customer support team for assistance.
-            </p>
+              Ready to experience the best cab service in Gujarat? Book your ride today with Patel Cab Services! Use our
+              easy-to-use online booking system for quick scheduling, or call our friendly customer support team for
+              personalized assistance. </p>
             <a href="tel:+919870038784" class="primary-btn text-uppercase">Call for Cab</a>
           </div>
           <div class="col-lg-4 col-md-6 header-right">
@@ -199,10 +272,10 @@
             <h1>Globally Connected by Large Network</h1>
             <h4>Bringing you reliable rides, anytime and anywhere.</h4>
             <p>
-              In today’s interconnected world, reliable transportation is essential. At PATEL CAB SERVICE, we pride
-              ourselves on our Globally Connected Network of Over Cab Drivers. Our expansive network ensures that no
-              matter where you are, a safe and dependable ride is always within reach.
-            </p>
+              Experience reliable rides anytime, anywhere with Patel Cab Services. In today’s interconnected world,
+              dependable transportation is crucial. At Patel Cab Services, we take pride in our extensive network of
+              drivers. Our global reach ensures that no matter where you are, a safe and reliable ride is always
+              available. </p>
             <a class="text-uppercase primary-btn" href="#">Get Details</a>
           </div>
         </div>
@@ -234,9 +307,9 @@
               <h4> Airport Trips</h4>
             </a>
             <p>
-              Enjoy stress-free transportation to and from major airports with our reliable service. Trust our
-              experienced
-              drivers to ensure a smooth journey, whether you're departing or arriving.
+              Ensure a smooth start or end to your journey with Patel Cab Services' reliable airport transfers. Our
+              punctual and professional drivers guarantee a stress-free ride to or from the airport, providing you with
+              comfort and peace of mind.
             </p>
           </div>
           <div class="col-lg-4 single-service">
@@ -245,8 +318,10 @@
               <h4>One-Way Trips</h4>
             </a>
             <p>
-              Simplify your travel plans with our convenient one-way trip service. Reach your destination hassle-free
-              without the need for a return journey.
+              Travel effortlessly with Patel Cab Services' convenient one-way trips. Whether you're heading to a
+              meeting, a special event, or a new destination, our reliable service ensures you arrive on time and in
+              comfort.
+
             </p>
           </div>
           <div class="col-lg-4 single-service">
@@ -255,9 +330,9 @@
               <h4>Round Trips</h4>
             </a>
             <p>
-              Experience seamless transportation for both outbound and return journeys with our round-trip service.
-              Enjoy
-              a comfortable and reliable ride from start to finish.
+              Enjoy the convenience of Patel Cab Services' round trip offerings. Perfect for day trips, business
+              meetings, or weekend getaways, our round trip service guarantees a reliable and comfortable journey to and
+              from your destination.
           </div>
         </div>
       </div>
@@ -269,13 +344,14 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- Start reviews Area -->
-    <section class="reviews-area section-gap">
+    <section class="reviews-card section-gap">
       <div class="container">
         <div class="row section-title">
           <h1>Affordable Cars with Top-notch Service</h1>
           <p>Who are in extremely love with eco friendly system.</p>
         </div>
-        <div class="swiper">
+
+        <!-- <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="single-carDetails">
@@ -324,7 +400,7 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="swiper-slide">
+          <div class="swiper-slide">
                 <img src="./imgs/04.jpg" alt="">
               </div>
               <div class="swiper-slide">
@@ -332,14 +408,66 @@
               </div>
               <div class="swiper-slide">
                 <img src="./imgs/06.jpg" alt="">
-              </div> -->
+              </div> 
           </div>
 
-          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-pagination"></div>
 
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+        </div> -->
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-image-container">
+                <img
+                  src="./img/kisspng-suzuki-swift-maruti-suzuki-car-swift-car-5b132b7ee6c540.5288783615279829749453.png"
+                  width="100%" />
+
+              </div>
+              <h2> Swift Dzier
+              </h2>
+              <p>
+                5 seater <b>/</b>
+                10 -/per KM
+
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-image-container">
+                <img src="./img/Cars/Remove background project.png" width="100%" />
+
+              </div>
+              <h2> Aura
+              </h2>
+              <p>
+                5 seater <b>/</b>
+                10 -/per KM
+
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-image-container">
+                <img src="./img/Cars/file (2).png" width="100%" />
+
+              </div>
+              <h3> Ertiga
+              </h3>
+              <p>
+                7 seater <b>/</b>
+                15 -/per KM
+
+              </p>
+            </div>
+          </div>
+
         </div>
+
+
       </div>
     </section>
     <!-- End reviews Area -->
@@ -460,9 +588,10 @@
           <div class="col-lg-8">
             <h1>Experience Great Support</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation.
+              Discover unparalleled customer care at Patel Cab Services. Our dedicated team is committed to ensuring
+              your journey is seamless and stress-free. Whether you need assistance with booking, have special requests,
+              or require information, we're here to provide reliable support every step of the way. Count on Patel Cab
+              Services for a travel experience where your satisfaction is our top priority.
             </p>
           </div>
           <div class="col-lg-4 btn-left">

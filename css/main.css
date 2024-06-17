@@ -2481,7 +2481,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .swiper-slide img {
   /* display: block; */
   width: 100%;
-  max-width: 660px;
+  max-width: 535px;
   aspect-ratio: 16/9;
   object-fit: cover;
 }
