@@ -195,12 +195,10 @@ h6 {
   transition: .3s;
   width: 100%;
   text-align: center;
-  font-size: 16px
+  font-size: 16px;
+  padding: 12px 0;
 }
-
-.single-footer-widget .row {
-  gap: 40px
-}
+ 
 
 .single-footer-widget .row h6:hover {
   cursor: pointer;
@@ -2840,6 +2838,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .home-about-area .about-right p {
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .home-about-area .about-right .primary-btn {
