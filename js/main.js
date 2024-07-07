@@ -1,6 +1,17 @@
 $(document).ready(function() {
     "use strict";
 
+    $(window).on("load", function () {
+        preloader();
+        // sliderAction();
+        // wowAnimation();
+        // aosAnimation();
+      });
+
+  function preloader() {
+    $("#preloader").delay(5).fadeOut();
+  }
+
     var window_width = $(window).width(),
         window_height = window.innerHeight,
         header_height = $(".default-header").height(),
@@ -58,6 +69,7 @@ $(document).ready(function() {
         footerIntagram();
     }
 
+   
 
     function footerIntagram(){
         var feed = new Instafeed({

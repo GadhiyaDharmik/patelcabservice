@@ -32,6 +32,13 @@
 </head>
 
 <body>
+
+	<a class="whats-app" href="#" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+	</a>
+	<a class="call" href="#" target="_blank">
+		<i class="fa fa-phone my-float"></i>
+	</a>
 	<header id="header">
 		<!-- <div class="header-top"></div> -->
 		<div class="container main-menu">
@@ -85,132 +92,210 @@
 	<!-- Start contact-page Area -->
 	<section class="contact-page-area section-gap">
 		<div class="container">
-			<div class="row">
-				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-				<div class="col-lg-4 d-flex flex-column address-wrap">
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-home"></span>
+			<div class="header-right">
+				<div class="row">
+					<!-- <div class="map-wrap" style="width:100%; height: 445px;" id="map"></div> -->
+					<div class="col-lg-4 d-flex flex-column address-wrap">
+						<div class="single-contact-address d-flex flex-row">
+							<div class="icon">
+								<span class="lnr lnr-home"></span>
+							</div>
+							<div class="contact-details">
+								<h5>Gujarat , Rajkot</h5>
+								<p>
+									Greenland Circle
+								</p>
+							</div>
 						</div>
-						<div class="contact-details">
-							<h5>Gujarat , Rajkot</h5>
-							<p>
-								Greenland Circle
-							</p>
+						<div class="single-contact-address d-flex flex-row">
+							<div class="icon">
+								<span class="lnr lnr-phone-handset"></span>
+							</div>
+							<div class="contact-details">
+								<h5>+91 98983-24155</h5>
+								<p class="text-start">24/7 awailable in any time</p>
+							</div>
+						</div>
+						<div class="single-contact-address d-flex flex-row">
+							<div class="icon">
+								<span class="lnr lnr-envelope"></span>
+							</div>
+							<div class="contact-details">
+								<h5>support@colorlib.com</h5>
+								<p>Send us your query anytime!</p>
+							</div>
 						</div>
 					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-phone-handset"></span>
-						</div>
-						<div class="contact-details">
-							<h5>+91 98983-24155</h5>
-							<p>24/7 awailable in any time</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-envelope"></span>
-						</div>
-						<div class="contact-details">
-							<h5>support@colorlib.com</h5>
-							<p>Send us your query anytime!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
-						<div class="row">
-							<div class="col-lg-6 form-group">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter your name'"
-									class="common-input mb-20 form-control" required="" type="text">
+					<div class="col-lg-8">
+						<form class="form-area contact-form text-right" id="myForm">
+							<div class="row">
+								<div class="col-lg-6 form-group">
+									<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Enter your name'"
+										class="common-input mb-20 form-control" required="" type="text">
 
-								<input name="email" placeholder="Enter email address"
-									pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
-									class="common-input mb-20 form-control" required="" type="email">
+									<input name="email" placeholder="Enter email address"
+										pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+										onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Enter email address'"
+										class="common-input mb-20 form-control" required="" type="email">
 
-								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control"
-									required="" type="text">
+									<input name="number" placeholder="Enter Mobile Number"
+										onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Enter Mobile Number'"
+										class="common-input mb-20 form-control" required="" type="text">
+								</div>
+								<div class="col-lg-6 form-group">
+									<textarea class="common-textarea form-control" name="message"
+										placeholder="Enter Messege" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+								</div>
+								<div class="col-lg-12">
+									<!-- <div class="alert-msg" style="text-align: left;"></div> -->
+									<!-- <button class="genric-btn primary" style="float: right;">Send Message</button> -->
+									<!-- <div class="header-right"> -->
+									<button class="btn btn-lg" type="button" onclick="submitForm()">
+										Send Message
+									</button>
+									<!-- </div> -->
+								</div>
 							</div>
-							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="message"
-									placeholder="Enter Messege" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
-							</div>
-							<div class="col-lg-12">
-								<div class="alert-msg" style="text-align: left;"></div>
-								<button class="genric-btn primary" style="float: right;">Send Message</button>
-							</div>
-						</div>
-					</form>
+						</form>
+						<!-- </div> -->
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- End contact-page Area -->
 
+	<script>
+		function submitForm() {
+			// Prevent default form submission
+			event.preventDefault();
+
+			// Get the form element
+			const form = document.getElementById('myForm');
+
+			// Create a FormData object to retrieve form values
+			const formData = new FormData(form);
+
+			// Extract individual data fields
+			const name = formData.get('name');
+			const email = formData.get('email');
+			const number = formData.get('number');
+			const message = formData.get('message');
+
+			// Simulate key generation for password reset link
+			const keys = "some_unique_key"; // You would generate or fetch this dynamically
+
+			// Create the email message
+			const newContentMessage = `
+        <h3 style='color:#000; font-family: Arial, sans-serif;'>Thank You for Contacting Us</h3>
+        <ul style='color:#333; font-family: Arial, sans-serif;'>
+            <li><strong>Name:</strong> ${name}</li>
+            <li><strong>Email:</strong> ${email}</li>
+            <li><strong>Mobile Number:</strong> ${number}</li>
+            <li><strong>Message:</strong> ${message}</li>
+        </ul>
+        <p style='color:#333; font-family: Arial, sans-serif;'>Best Regards,</p>
+        <p style='color:#333; font-family: Arial, sans-serif;'>[Your Company Name]</p>
+    `;
+
+
+			// Print form data and email message to the console
+			console.log(newContentMessage);
+
+			// Uncomment the code below to send data to the server via AJAX after verifying the console logs
+			/*
+			fetch('mail.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name: name,
+					email: email,
+					number: number,
+					message: message,
+					emailMessage: emailMessage
+				})
+			})
+			.then(response => response.json())
+			.then(data => {
+				// Handle success
+				console.log('Success:', data);
+				alert('Message sent successfully!');
+			})
+			.catch((error) => {
+				// Handle error
+				console.error('Error:', error);
+				alert('Error sending message.');
+			});
+			*/
+		}
+
+	</script>
+
 	<!-- start footer Area -->
 	<footer class="footer-area section-gap">
 		<div class="container">
-		  <div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 mb-5">
-			  <div class="single-footer-widget">
-				<!-- <h6>Quick links</h6> -->
-				<!-- <ul>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 mb-5">
+					<div class="single-footer-widget">
+						<!-- <h6>Quick links</h6> -->
+						<!-- <ul>
 				  <li><a href="#">Jobs</a></li>
 				  <li><a href="#">Brand Assets</a></li>
 				  <li><a href="#">Investor Relations</a></li>
 				  <li><a href="#">Terms of Service</a></li>
 				</ul> -->
-				<div class="row text-center g-5">
-				  <h6 class="col-md-2 col-6">Ahmedabad</h6>
-				  <h6 class="col-md-2 col-6">Surat</h6>
-				  <h6 class="col-md-2 col-6">Vadodara</h6>
-				  <h6 class="col-md-2 col-6">Rajkot</h6>
-				  <h6 class="col-md-2 col-6">Bhavnagar</h6>
-  
-				  <h6 class="col-md-2 col-6">Jamnagar</h6>
-				  <h6 class="col-md-2 col-6">Junagadh</h6>
-				  <h6 class="col-md-2 col-6">Gandhinagar</h6>
-				  <!-- <h6 class="col-md-2 col-6">Gandhidham</h6> -->
-				  <h6 class="col-md-2 col-6">Porbandar</h6>
-  
-				  <h6 class="col-md-2 col-6">Nadiad</h6>
-				  <h6 class="col-md-2 col-6">Morbi</h6>
-				  <h6 class="col-md-2 col-6">Bharuch</h6>
-				  <!-- <h6 class="col-md-2 col-6">Mehsana</h6> -->
-				  <!-- <h6 class="col-md-2 col-6">Anand</h6> -->
-  
-				  <h6 class="col-md-2 col-6">Navsari</h6>
-				  <h6 class="col-md-2 col-6">Veraval</h6>
-				  <h6 class="col-md-2 col-6">Vapi</h6>
-				  <h6 class="col-md-2 col-6">Palanpur</h6>
-				  <!-- <h6 class="col-md-2 col-6">Surendranagar</h6> -->
-  
-				  <h6 class="col-md-2 col-6">Botad</h6>
-				  <!-- <h6 class="col-md-2 col-6">Godhra</h6> -->
-				  <!-- <h6 class="col-md-2 col-6">Patan</h6> -->
-				  <!-- <h6 class="col-md-2 col-6">Dahod</h6> -->
-				  <h6 class="col-md-2 col-6">Amreli</h6>
-  
-				  <h6 class="col-md-2 col-6">Deesa</h6>
-				  <h6 class="col-md-2 col-6">Jetpur</h6>
-				  <h6 class="col-md-2 col-6">Kalol</h6>
-				  <h6 class="col-md-2 col-6">Khambhat</h6>
-				  <h6 class="col-md-2 col-6">Valsad</h6>
-  
-				  <h6 class="col-md-2 col-6">Bardoli</h6>
-				  <h6 class="col-md-2 col-6">Unjha</h6>
-				  <h6 class="col-md-2 col-6">Modasa</h6>
-				  <h6 class="col-md-2 col-6">Lunawada</h6>
-				  <h6 class="col-md-2 col-6">Chhota Udepur</h6>
+						<div class="row text-center g-5">
+							<h6 class="col-md-2 col-6">Ahmedabad</h6>
+							<h6 class="col-md-2 col-6">Surat</h6>
+							<h6 class="col-md-2 col-6">Vadodara</h6>
+							<h6 class="col-md-2 col-6">Rajkot</h6>
+							<h6 class="col-md-2 col-6">Bhavnagar</h6>
+
+							<h6 class="col-md-2 col-6">Jamnagar</h6>
+							<h6 class="col-md-2 col-6">Junagadh</h6>
+							<h6 class="col-md-2 col-6">Gandhinagar</h6>
+							<!-- <h6 class="col-md-2 col-6">Gandhidham</h6> -->
+							<h6 class="col-md-2 col-6">Porbandar</h6>
+
+							<h6 class="col-md-2 col-6">Nadiad</h6>
+							<h6 class="col-md-2 col-6">Morbi</h6>
+							<h6 class="col-md-2 col-6">Bharuch</h6>
+							<!-- <h6 class="col-md-2 col-6">Mehsana</h6> -->
+							<!-- <h6 class="col-md-2 col-6">Anand</h6> -->
+
+							<h6 class="col-md-2 col-6">Navsari</h6>
+							<h6 class="col-md-2 col-6">Veraval</h6>
+							<h6 class="col-md-2 col-6">Vapi</h6>
+							<h6 class="col-md-2 col-6">Palanpur</h6>
+							<!-- <h6 class="col-md-2 col-6">Surendranagar</h6> -->
+
+							<h6 class="col-md-2 col-6">Botad</h6>
+							<!-- <h6 class="col-md-2 col-6">Godhra</h6> -->
+							<!-- <h6 class="col-md-2 col-6">Patan</h6> -->
+							<!-- <h6 class="col-md-2 col-6">Dahod</h6> -->
+							<h6 class="col-md-2 col-6">Amreli</h6>
+
+							<h6 class="col-md-2 col-6">Deesa</h6>
+							<h6 class="col-md-2 col-6">Jetpur</h6>
+							<h6 class="col-md-2 col-6">Kalol</h6>
+							<h6 class="col-md-2 col-6">Khambhat</h6>
+							<h6 class="col-md-2 col-6">Valsad</h6>
+
+							<h6 class="col-md-2 col-6">Bardoli</h6>
+							<h6 class="col-md-2 col-6">Unjha</h6>
+							<h6 class="col-md-2 col-6">Modasa</h6>
+							<h6 class="col-md-2 col-6">Lunawada</h6>
+							<h6 class="col-md-2 col-6">Chhota Udepur</h6>
+						</div>
+					</div>
 				</div>
-			  </div>
-			</div>
-			<!-- <div class="col-lg-2 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-2 col-md-6 col-sm-6">
 			  <div class="single-footer-widget">
 				<h6>Features</h6>
 				<ul>
@@ -232,7 +317,7 @@
 				</ul>
 			  </div>
 			</div> -->
-			<div class="col-lg-6 col-md-6 col-sm-6 social-widget">
+				<!-- <div class="col-lg-6 col-md-6 col-sm-6 social-widget">
 			  <div class="single-footer-widget">
 				<h6>Follow Us</h6>
 				<p>Let us be social</p>
@@ -265,21 +350,22 @@
 				  </form>
 				</div>
 			  </div>
+			</div> -->
+				<p class="mt-100 mx-auto footer-text col-lg-12 text-light text-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<!-- <footer> -->
+					Copyright &copy; 2024
+					<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+					<a href="#">Patel Cab Service</a> - Your trusted ride partner.
+					<!-- </footer> -->
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
 			</div>
-			<p class="mt-100 mx-auto footer-text col-lg-12 text-light text-center">
-			  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			  <!-- <footer> -->
-			  Copyright &copy; 2024
-			  <!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
-			  <a href="#">Patel Cab Service</a> - Your trusted ride partner.
-			  <!-- </footer> -->
-			  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			</p>
-		  </div>
 		</div>
 		<!-- <img class="footer-bottom" src="img/footer-bottom.png" alt="" /> -->
-	  </footer>
+	</footer>
 	<!-- End footer Area -->
+
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
