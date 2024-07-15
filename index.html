@@ -48,21 +48,13 @@
     <a class="call" href="#" target="_blank">
       <i class="fa fa-phone my-float"></i>
     </a>
-    <div id="preloader">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-    </div>
+
     <!-- Preloader-end -->
     <div id="content">
       <header id="header">
         <!-- <div class="header-top"></div> -->
         <div class="container main-menu">
-          <div class="row align-items-center justify-content-between d-flex">
+          <div class="row align-items-cente r justify-content-between d-flex">
             <a href="index.html"
               ><img src="img/PTEL-removebg2.png" alt="" title="" width="60%"
             /></a>
@@ -85,8 +77,25 @@
                       </li>					              
                     </ul>
                   </li> -->
-                <!-- <li><a href="elements.html">Elements</a></li>							  			          	           -->
+                <!-- <li>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Launch demo modal
+                  </button>
+                </li> -->
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                  <div class="footer-social d-flex align-items-center">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    <!-- <a href="#"><i class="fa fa-behance"></i></a> -->
+                  </div>
+                </li>
               </ul>
             </nav>
             <!-- #nav-menu-container -->
@@ -838,7 +847,7 @@
                     <span class="lnr lnr-envelope"></span>
                   </div>
                   <div class="contact-details">
-                    <h5>support@colorlib.com</h5>
+                    <h5>patelcabservice@gmail.com</h5>
                     <p>Send us your query anytime!</p>
                   </div>
                 </div>
@@ -922,7 +931,7 @@
 
           // Send the data using Axios
           axios
-            .post("https://patel-cab-service-mailapi.onrender.com/send-email", {
+            .post("https://mail-send-api.onrender.com/send-email", {
               name: name,
               email: email,
               number: number,
@@ -1023,19 +1032,19 @@
       <footer class="footer-area section-gap">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 social-widget">
+            <!-- <div class="col-lg-6 col-md-6 col-sm-6 social-widget">
               <div class="single-footer-widget">
                 <h6>Follow Us</h6>
                 <p class="text-light">Let us be social</p>
                 <div class="footer-social d-flex align-items-center">
                   <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-whatsapp"></i></a>
                   <a href="#"><i class="fa fa-behance"></i></a>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            </div> -->
+            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="single-footer-widget">
                 <h6>Newsletter</h6>
                 <p>Stay update with our latest</p>
@@ -1071,7 +1080,7 @@
                   </form>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="single-footer-widget">
                 <!-- <h6>Quick links</h6> -->

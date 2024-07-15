@@ -98,6 +98,39 @@ body {
   position: relative;
 }
 
+/* HTML: <div class="loader"></div> */
+.loader {
+  --c: no-repeat linear-gradient(orange 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
+    var(--c), var(--c), var(--c);
+  background-size: 16px 16px;
+  animation: l32-1 1s infinite, l32-2 1s infinite;
+}
+@keyframes l32-1 {
+  0%,
+  100% {
+    width: 45px;
+    height: 45px;
+  }
+  35%,
+  65% {
+    width: 65px;
+    height: 65px;
+  }
+}
+@keyframes l32-2 {
+  0%,
+  40% {
+    background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%,
+      100% 0, 50% 0, 50% 50%;
+  }
+  60%,
+  100% {
+    background-position: 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0,
+      50% 0, 0 0, 50% 50%;
+  }
+}
+
 ol,
 ul {
   margin: 0;
@@ -2580,11 +2613,14 @@ h6 {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.8); */
+  background: #fdc501;
   left: -260px;
   width: 260px;
   overflow-y: auto;
   transition: 0.4s;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 #mobile-nav ul {
@@ -2649,6 +2685,10 @@ h6 {
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
   display: none;
+}
+
+#mobile-nav ul li a i {
+  color: #fff;
 }
 
 /* Mobile Nav body classes */
@@ -4342,7 +4382,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-social i {
-  color: #ffffff;
+  color: #212529;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
