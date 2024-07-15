@@ -1242,7 +1242,6 @@ h6 {
   transform: translateY(-10px);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
     -4px -4px 12px rgba(0, 0, 0, 0.08);
-
   .card-image-container {
     background-color: #fdc501;
   }
@@ -1292,6 +1291,41 @@ h6 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #212529;
   cursor: default;
+}
+
+.reviews-area .container .card {
+  display: flex;
+  flex-direction: column;
+  /* width: 230px;
+  height: 280px;
+  max-height: 330px; */
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+    -4px -4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* .reviews-area .container .card h4 {
+  color: #fff;
+} */
+
+.reviews-area .container .card:hover {
+  /* transform: translateY(-10px); */
+  background-color: #212529;
+  height: 115px;
+
+  h4 {
+    color: #fff;
+  }
 }
 
 .genric-btn {
