@@ -48,10 +48,14 @@
   </head>
 
   <body>
-    <a class="whats-app" href="#" target="_blank">
+    <a
+      class="whats-app"
+      href="https://wa.me/+919898324155?text=I'm%20interested%20in%20your%20car%20for%20sale"
+      target="_blank"
+    >
       <i class="fa fa-whatsapp my-float"></i>
     </a>
-    <a class="call" href="#" target="_blank">
+    <a class="call" href="tel:+919898324155" target="_blank">
       <i class="fa fa-phone my-float"></i>
     </a>
 
@@ -1196,6 +1200,8 @@
       $(window).on("load", function () {
         $(".loader").fadeOut(1000);
         $("#content").fadeIn(1000);
+        $(".whats-app").fadeIn(1000);
+        $(".call").fadeIn(1000);
       });
     </script>
 

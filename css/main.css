@@ -88,7 +88,8 @@ $black			: #212529;
   color: #777777;
   font-weight: 300;
 }
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   position: relative;
@@ -104,10 +105,14 @@ body {
 #content {
   display: none;
 }
+.whats-app {
+  display: none;
+}
+.call {
+  display: none;
+}
 
 /* HTML: <div class="loader"></div> */
-
-
 
 .loader {
   position: absolute;
