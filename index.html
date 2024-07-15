@@ -16,8 +16,9 @@
     <meta name="keywords" content="" />
     <!-- meta character set -->
     <meta charset="UTF-8" />
+
     <!-- Site Title -->
-    <title>Cab</title>
+    <title>Patel Cab Service</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
@@ -39,6 +40,11 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -49,12 +55,14 @@
       <i class="fa fa-phone my-float"></i>
     </a>
 
+    <div class="loader"></div>
+
     <!-- Preloader-end -->
     <div id="content">
       <header id="header">
         <!-- <div class="header-top"></div> -->
         <div class="container main-menu">
-          <div class="row align-items-cente r justify-content-between d-flex">
+          <div class="row align-items-center justify-content-between d-flex">
             <a href="index.html"
               ><img src="img/PTEL-removebg2.png" alt="" title="" width="60%"
             /></a>
@@ -90,9 +98,17 @@
                 <li><a href="#contact">Contact</a></li>
                 <li>
                   <div class="footer-social d-flex align-items-center">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    <div class="col-lg-6 col-md-6 col-sm-6 social-widget">
+                      <div class="single-footer-widget">
+                        <div class="footer-social d-flex align-items-center">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                          <a href="#"><i class="fa fa-whatsapp"></i></a>
+                          <!-- <a href="#"><i class="fa fa-behance"></i></a> -->
+                        </div>
+                      </div>
+                    </div>
+
                     <!-- <a href="#"><i class="fa fa-behance"></i></a> -->
                   </div>
                 </li>
@@ -432,7 +448,7 @@
             <div class="col-lg-6 about-right">
               <h1>Globally Connected by Large Network</h1>
               <h4>Bringing you reliable rides, anytime and anywhere.</h4>
-              <p>
+              <p class="text-dark">
                 Experience reliable rides anytime, anywhere with Patel Cab
                 Services. In today’s interconnected world, dependable
                 transportation is crucial. At Patel Cab Services, we take pride
@@ -1176,12 +1192,15 @@
       <!-- End footer Area -->
     </div>
 
+    <script>
+      $(window).on("load", function () {
+        $(".loader").fadeOut(1000);
+        $("#content").fadeIn(1000);
+      });
+    </script>
+
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
     <script src="js/easing.min.js"></script>

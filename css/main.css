@@ -88,18 +88,32 @@ $black			: #212529;
   color: #777777;
   font-weight: 300;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
 body {
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.625em;
-  position: relative;
+  /* position: relative; */
+}
+#content {
+  display: none;
 }
 
 /* HTML: <div class="loader"></div> */
+
+
+
 .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   --c: no-repeat linear-gradient(orange 0 0);
   background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
     var(--c), var(--c), var(--c);
@@ -2614,7 +2628,7 @@ h6 {
   bottom: 0;
   z-index: 998;
   /* background: rgba(0, 0, 0, 0.8); */
-  background: #fdc501;
+  background: #ffffff;
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -2634,7 +2648,7 @@ h6 {
 }
 
 #mobile-nav ul li a {
-  color: #fff;
+  color: #333;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -2648,7 +2662,7 @@ h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #fff;
+  color: #333;
 }
 
 #mobile-nav ul li li {
@@ -2661,7 +2675,7 @@ h6 {
   z-index: 99;
   padding: 15px;
   cursor: pointer;
-  color: #fff;
+  color: #333;
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
@@ -2688,7 +2702,7 @@ h6 {
 }
 
 #mobile-nav ul li a i {
-  color: #fff;
+  color: #333;
 }
 
 /* Mobile Nav body classes */
