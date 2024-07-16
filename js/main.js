@@ -109,12 +109,17 @@ $(document).ready(function () {
   if ($("#nav-menu-container").length) {
     var $mobile_nav = $("#nav-menu-container").clone().prop({
       id: "mobile-nav",
+      style: "text-align:center",
     });
     $mobile_nav.find("> ul").attr({
       class: "",
       id: "",
     });
     $("body").append($mobile_nav);
+    // debugger;
+    $("#mobile-nav").prepend(
+      '<a href="#home"><img src="img/PTEL-removebg2.png" alt="" title="" width="85%" style="height: 135px;padding: 20px 0px 30px 0px;border-bottom: 1px solid #000;"/></a>'
+    );
     $("body").prepend(
       '<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>'
     );
