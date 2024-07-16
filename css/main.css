@@ -2623,7 +2623,7 @@ h6 {
   transition: 0.5s;
 }
 
-.nav-menu li a:hover{
+.nav-menu li a:hover {
   color: #fdc501;
 }
 
@@ -2653,7 +2653,9 @@ h6 {
   /* Top-left corner */
   border-bottom-right-radius: 50px;
 }
-
+#mobile-nav-toggle .lnr-cross {
+  color: #fff;
+}
 #mobile-nav-toggle i {
   color: #212529;
   font-weight: 900;
@@ -2698,10 +2700,11 @@ h6 {
 
 #mobile-nav ul li a {
   color: #333;
-  font-size: 13px;
+  font-size: 20px;
   text-transform: uppercase;
   overflow: hidden;
-  padding: 10px 22px 10px 15px;
+  text-align: center;
+  padding: 37px 22px 10px 20px;
   position: relative;
   text-decoration: none;
   width: 100%;
@@ -2751,7 +2754,12 @@ h6 {
 }
 
 #mobile-nav ul li a i {
+  font-size: 40px;
   color: #333;
+}
+
+#mobile-nav ul li .single-footer-widget {
+  border-top: 1px solid #212529;
 }
 
 /* Mobile Nav body classes */
