@@ -2406,7 +2406,7 @@ h6 {
 /*  Menu Styles
 /* =================================== */
 .header-top {
-  background: url("../img/menu-top.jpg");
+  background: url("../img/menu-top.jpeg");
   background-size: cover;
   height: 20px;
   -webkit-transition: all 0.3s ease 0s;
@@ -2909,7 +2909,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- Start Banner Area ------------*/
 .banner-area {
-  background: url(../img/header-bg.jpg) center;
+  background: url(../img/header-bg.jpeg) center;
   background-size: cover;
 }
 
@@ -3320,7 +3320,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- End review Area -------------*/
 /*-------- start home-calltoaction Area -------------*/
 .home-calltoaction-area {
-  background: url(../img/call-action-bg.jpg) center;
+  background: url(../img/call-action-bg.jpeg) center;
   background-size: cover;
 }
 
@@ -3439,7 +3439,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-banner {
-  background: url(../img/top-banner.jpg) center;
+  background: url(../img/top-banner.jpeg) center;
 }
 
 .about-content {
@@ -3476,7 +3476,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* =================================== */
 /*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
-  background: url(../img/blog/blog-home-banner.jpg) bottom;
+  background: url(../img/blog/blog-home-banner.jpeg) bottom;
   background-size: cover;
   padding: 130px 0px;
 }
