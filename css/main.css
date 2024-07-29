@@ -2073,7 +2073,7 @@ h6 {
 }
 
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center
+  background: url(../img/elements/primary-check.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2112,7 +2112,7 @@ h6 {
 }
 
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center
+  background: url(../img/elements/success-check.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2156,7 +2156,7 @@ h6 {
 }
 
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center
+  background: url(../img/elements/disabled-check.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2195,7 +2195,7 @@ h6 {
 }
 
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center
+  background: url(../img/elements/primary-radio.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2234,7 +2234,7 @@ h6 {
 }
 
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center
+  background: url(../img/elements/success-radio.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2278,7 +2278,7 @@ h6 {
 }
 
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center
+  background: url(../img/elements/disabled-radio.webp) no-repeat center
     center/cover;
   border: none;
 }
@@ -2406,7 +2406,7 @@ h6 {
 /*  Menu Styles
 /* =================================== */
 .header-top {
-  background: url("../img/menu-top.jpeg");
+  background: url("../img/menu-top.webp");
   background-size: cover;
   height: 20px;
   -webkit-transition: all 0.3s ease 0s;
@@ -2909,7 +2909,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- Start Banner Area ------------*/
 .banner-area {
-  background: url(../img/header-bg.jpeg) center;
+  background: url(../img/header-bg.webp) center;
   background-size: cover;
 }
 
@@ -3320,7 +3320,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- End review Area -------------*/
 /*-------- start home-calltoaction Area -------------*/
 .home-calltoaction-area {
-  background: url(../img/call-action-bg.jpeg) center;
+  background: url(../img/call-action-bg.webp) center;
   background-size: cover;
 }
 
@@ -3439,7 +3439,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-banner {
-  background: url(../img/top-banner.jpeg) center;
+  background: url(../img/top-banner.webp) center;
 }
 
 .about-content {
@@ -3476,7 +3476,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* =================================== */
 /*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
-  background: url(../img/blog/blog-home-banner.jpeg) bottom;
+  background: url(../img/blog/blog-home-banner.webp) bottom;
   background-size: cover;
   padding: 130px 0px;
 }

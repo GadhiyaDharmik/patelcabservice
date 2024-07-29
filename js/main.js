@@ -118,7 +118,7 @@ $(document).ready(function () {
     $("body").append($mobile_nav);
     // debugger;
     $("#mobile-nav").prepend(
-      '<a href="#home"><img src="img/PTEL-removebg2.png" alt="" title="" width="85%" style="height: 135px;padding: 20px 0px 30px 0px;border-bottom: 1px solid #000;"/></a>'
+      '<a href="#home"><img src="img/PTEL-removebg2.webp" alt="" title="" width="85%" style="height: 135px;padding: 20px 0px 30px 0px;border-bottom: 1px solid #000;"/></a>'
     );
     $("body").prepend(
       '<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>'
@@ -139,17 +139,16 @@ $(document).ready(function () {
       $("#mobile-nav-toggle i").toggleClass("lnr-cross lnr-menu");
       $("#mobile-body-overly").toggle();
     });
-
-    $(document).on("click", function (e) {
-      var container = $("#mobile-nav, #mobile-nav-toggle");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($("body").hasClass("mobile-nav-active")) {
-          $("body").removeClass("mobile-nav-active");
-          $("#mobile-nav-toggle i").toggleClass("lnr-cross lnr-menu");
-          $("#mobile-body-overly").fadeOut();
-        }
-      }
-    });
+    // $(document).on("click", function (e) {
+    //   var container = $("#mobile-nav, #mobile-nav-toggle");
+    //   if (!container.is(e.target) && container.has(e.target).length === 0) {
+    //     if ($("body").hasClass("mobile-nav-active")) {
+    //       $("body").removeClass("mobile-nav-active");
+    //       $("#mobile-nav-toggle i").toggleClass("lnr-cross lnr-menu");
+    //       $("#mobile-body-overly").fadeOut();
+    //     }
+    //   }
+    // });
   } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
     $("#mobile-nav, #mobile-nav-toggle").hide();
   }
@@ -189,7 +188,7 @@ $(document).ready(function () {
 
         if ($("body").hasClass("mobile-nav-active")) {
           $("body").removeClass("mobile-nav-active");
-          $("#mobile-nav-toggle i").toggleClass("lnr-times lnr-bars");
+          $("#mobile-nav-toggle i").toggleClass("lnr-cross lnr-menu");
           $("#mobile-body-overly").fadeOut();
         }
 
