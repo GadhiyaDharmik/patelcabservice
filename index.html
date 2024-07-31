@@ -37,6 +37,12 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+
     <!--
 			CSS
 			============================================= -->
@@ -53,11 +59,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -87,7 +88,7 @@
                 width="60%"
             /></a>
             <nav id="nav-menu-container">
-              <ul class="nav-menu">
+              <ul class="nav-menu" style="display: flex; align-items: center">
                 <li class="menu-active"><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#service">Services</a></li>
@@ -97,12 +98,26 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 social-widget">
                       <div class="single-footer-widget">
                         <div class="footer-social d-flex align-items-center">
-                          <a href="#"><i class="fa fa-facebook"></i></a>
-                          <a href="#"><i class="fa fa-instagram"></i></a>
+                          <a
+                            href="https://www.facebook.com/profile.php?id=61562766850489&mibextid=ZbWKwL"
+                          >
+                            <!-- <i class="fa fa-facebook"></i> -->
+                            <img src="./img/facebook.svg" height="30px" />
+                          </a>
+                          <a
+                            href="https://www.instagram.com/patelcabservices?igsh=MWM0bDVzcnR5dnR2MQ=="
+                          >
+                            <!-- <i class="fa fa-instagram"></i
+                          > -->
+                            <img src="./img/instagram.svg" height="30px" />
+                          </a>
                           <a
                             href="https://wa.me/+919898324155?text=Hi,%20I%20would%20like%20to%20book%20a%20cab."
-                            ><i class="fa fa-whatsapp"></i
-                          ></a>
+                          >
+                            <!-- <i class="fa fa-whatsapp"></i
+                          > -->
+                            <img src="./img/whatsapp.svg" height="30px" />
+                          </a>
                           <!-- <a href="#"><i class="fa fa-behance"></i></a> -->
                         </div>
                       </div>
@@ -221,8 +236,7 @@
                 <div class="form-group">
                   <button
                     class="btn btn-default btn-lg btn-block text-center text-uppercase"
-                    type="button"
-                    onclick="validateForm()"
+                    type="submit"
                   >
                     Make reservation
                   </button>
@@ -233,9 +247,33 @@
         </div>
       </section>
       <!-- End banner Area -->
-
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
       <!------Form Data Fach----->
-      <script>
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import {
+          getFirestore,
+          collection,
+          addDoc,
+        } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAlAmCaYzZdY9mEL1Cx5owgFGgqGqsBEVo",
+          authDomain: "patel-cab-service.firebaseapp.com",
+          databaseURL:
+            "https://patel-cab-service-default-rtdb.firebaseio.com/all-bookings",
+          projectId: "patel-cab-service",
+          storageBucket: "patel-cab-service.appspot.com",
+          messagingSenderId: "292222967613",
+          appId: "1:292222967613:web:a201b43a47d62d55c8ef54",
+          measurementId: "G-G99SFDSBSL",
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
         // List of Gujarat cities
         const gujaratCities = [
           { name: "Ahmedabad" },
@@ -330,6 +368,30 @@
           { name: "Sayla" },
           { name: "Umrala" },
         ];
+        // Print selected city to console
+
+        // function addData(bookingData) {
+        //   db.collection("all-bookings")
+        //     .add({
+        //       ...bookingData,
+        //       // name: "John Doe",
+        //       bokingDate: new Date(),
+        //       // status: "confirmed",
+        //     })
+        //     .then((docRef) => {
+        //       // console.log("Document written with ID: ", docRef.id);
+        //       toastr.success("Form submitted successfully!");
+        //       $("#content").fadeIn(1000);
+        //       $(".whats-app").fadeIn(1000);
+        //       $(".call").fadeIn(1000);
+        //     })
+        //     .catch((error) => {
+        //       console.error("Error adding document: ", error);
+        //       $("#content").fadeIn(1000);
+        //       $(".whats-app").fadeIn(1000);
+        //       $(".call").fadeIn(1000);
+        //     });
+        // }
 
         // Populate the dropdowns
         function populateDropdown() {
@@ -343,6 +405,10 @@
 
             // Add the option to both dropdowns
             fromDropdown.appendChild(option.cloneNode(true));
+            // toDropdown.appendChild(option.cloneNode(true));
+
+            // Add the option to both dropdowns
+            // fromDropdown.appendChild(option.cloneNode(true));
             toDropdown.appendChild(option.cloneNode(true));
           });
         }
@@ -363,68 +429,94 @@
             console.log("To Destination:", this.value);
           });
 
-        // Form validation
-        function validateForm() {
-          // Clear previous errors
-          document
-            .querySelectorAll(".error")
-            .forEach((error) => (error.style.display = "none"));
+        // Form validation and data submission
+        document
+          .getElementById("reservationForm")
+          .addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-          let isValid = true;
+            // Clear previous errors
+            document
+              .querySelectorAll(".error")
+              .forEach((error) => (error.style.display = "none"));
 
-          const name = document.querySelector('[name="name"]').value.trim();
-          const phone = document.querySelector('[name="phone"]').value.trim();
-          const fromDestination =
-            document.getElementById("fromDestination").value;
-          const toDestination = document.getElementById("toDestination").value;
-          const date = document.getElementById("datepicker2").value.trim();
+            let isValid = true;
 
-          if (!name) {
-            document.getElementById("nameError").style.display = "block";
-            isValid = false;
-          }
-          if (!phone) {
-            document.getElementById("phoneError").style.display = "block";
-            isValid = false;
-          }
-          if (!fromDestination) {
-            document.getElementById("fromDestinationError").style.display =
-              "block";
-            isValid = false;
-          }
-          if (!toDestination) {
-            document.getElementById("toDestinationError").style.display =
-              "block";
-            isValid = false;
-          }
-          if (!date) {
-            document.getElementById("dateError").style.display = "block";
-            isValid = false;
-          }
+            const name = document.querySelector('[name="name"]').value.trim();
+            const phone = document.querySelector('[name="phone"]').value.trim();
+            const fromDestination =
+              document.getElementById("fromDestination").value;
+            const toDestination =
+              document.getElementById("toDestination").value;
+            const date = document.getElementById("datepicker2").value.trim();
 
-          if (isValid) {
-            let bookingData = {
-              name: name,
-              phone: phone,
-              fromDestination: fromDestination,
-              toDestination: toDestination,
-              dateOfTrip: date,
-            };
-            axios
-              .post("https://patelcabapi.onrender.com/submit", bookingData)
-              .then((response) => {
-                console.log("Form submitted successfully!", response.data);
-                // alert("Form submitted successfully!")  ;
-              })
-              .catch((error) => {
-                console.error("Error submitting form:", error);
-                alert("There was an error submitting the form.");
-              });
-            alert("Form submitted successfully!");
-          } else {
-            console.log("Form validation failed.");
-          }
-        }
+            if (!name) {
+              document.getElementById("nameError").style.display = "block";
+              isValid = false;
+            }
+            if (!phone) {
+              document.getElementById("phoneError").style.display = "block";
+              isValid = false;
+            }
+            if (!fromDestination) {
+              document.getElementById("fromDestinationError").style.display =
+                "block";
+              isValid = false;
+            }
+            if (!toDestination) {
+              document.getElementById("toDestinationError").style.display =
+                "block";
+              isValid = false;
+            }
+            if (!date) {
+              document.getElementById("dateError").style.display = "block";
+              isValid = false;
+            }
+
+            if (isValid) {
+              const bookingData = {
+                name: name,
+                phone: phone,
+                fromDestination: fromDestination,
+                toDestination: toDestination,
+                dateOfTrip: date,
+                bookingDate: new Date(),
+              };
+
+              document.querySelector(".loader").style.display = "block";
+              document.getElementById("content").style.display = "none";
+              document.querySelector(".whats-app").style.display = "none";
+              document.querySelector(".call").style.display = "none";
+
+              try {
+                const docRef = await addDoc(
+                  collection(db, "all-bookings"),
+                  bookingData
+                );
+                console.log("Document written with ID: ", docRef.id);
+                toastr.success(
+                  "Form submitted successfully! We will give your status in 1hr"
+                );
+                // document.getElementById("fromDestination").value = "Ahmedabad";
+                // document.getElementById("toDestination").value = "Rajkot";
+                // document.getElementById("reservationForm").reset();
+                // Reset the form
+              } catch (error) {
+                console.error("Error adding document: ", error);
+              } finally {
+                window.location.href = "/index.html";
+
+                // document.getElementById("fromDestination").value = "";
+                // document.querySelector(".loader").style.display = "none";
+                // document.getElementById("content").style.display = "block";
+                // document.querySelector(".whats-app").style.display = "block";
+                // document.querySelector(".call").style.display = "block";
+                // window.location.reload();
+              }
+            } else {
+              console.log("Form validation failed.");
+            }
+          });
       </script>
       <!------Form Data Fach----->
 
@@ -984,6 +1076,7 @@
       </section>
       <!-- End contact-page Area -->
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
       <script>
         function submitForm() {
