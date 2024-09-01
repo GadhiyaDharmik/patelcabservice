@@ -102,6 +102,7 @@ body {
   line-height: 1.625em;
   /* position: relative; */
 }
+p{font-family: sans-serif;}
 #content {
   display: none;
 }
