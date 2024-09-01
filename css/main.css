@@ -1221,22 +1221,19 @@ h6 {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  /* width: 230px;
-  height: 280px;
-  max-height: 330px; */
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
-    -4px -4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
-  box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
-  margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+    height: 100%;
 }
 
 .card:hover {
