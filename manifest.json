@@ -1,0 +1,21 @@
+{
+  "name": "Patel Cab Service",
+  "short_name": "Patel Cab",
+  "description": "Book Ahmedabad to Rajkot cab service starting @₹10/km. Premium one-way taxi, round trips, and airport transfers.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff9000",
+  "icons": [
+    {
+      "src": "img/PTEL.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/PTEL.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patelcabservice.com/sitemap.xml

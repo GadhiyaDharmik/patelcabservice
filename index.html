@@ -23,10 +23,13 @@
   <meta property="og:image" content="https://patelcabservice.com/img/PTEL.png" />
 
   <!-- Favicon-->
+  <meta name="theme-color" content="#ff9000" />
   <link rel="icon" type="image/png" href="img/PTEL.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="img/PTEL.png" sizes="48x48" />
   <link rel="apple-touch-icon" href="img/PTEL.png" />
   <link rel="shortcut icon" href="img/PTEL.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="canonical" href="https://patelcabservice.com/" />
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
@@ -47,34 +50,90 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "name": "Patel Cab Service",
-    "description": "Premium cab booking from Ahmedabad to Rajkot and Rajkot to Ahmedabad. Affordable one-way and round-trip taxi service.",
-    "url": "https://patelcabservice.com/",
-    "telePhone": "+919879677359",
-    "areaServed": ["Ahmedabad", "Rajkot", "Jamnagar", "Surat", "Gujarat"],
-    "provider": {
-      "@type": "LocalBusiness",
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
       "name": "Patel Cab Service",
-      "image": "https://patelcabservice.com/img/PTEL.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Greenland Circle",
-        "addressLocality": "Rajkot",
-        "addressRegion": "Gujarat",
-        "postalCode": "360003",
-        "addressCountry": "IN"
+      "description": "Premium cab booking from Ahmedabad to Rajkot and Rajkot to Ahmedabad. Affordable one-way and round-trip taxi service.",
+      "url": "https://patelcabservice.com/",
+      "telePhone": "+919879677359",
+      "areaServed": ["Ahmedabad", "Rajkot", "Jamnagar", "Surat", "Gujarat"],
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Patel Cab Service",
+        "image": "https://patelcabservice.com/img/PTEL.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Greenland Circle",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360003",
+          "addressCountry": "IN"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "10",
+        "description": "Starting from ₹10 per km"
       }
     },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "10",
-      "description": "Starting from ₹10 per km"
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the fare for Ahmedabad to Rajkot cab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Ahmedabad to Rajkot cab fare starts from ₹10/km for sedan cars. We offer fixed one-way rates to ensure complete transparency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book a one-way taxi from Rajkot to Ahmedabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in one-way taxi Gujarat. You can book a drop from Rajkot to Ahmedabad and pay only for that journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide Ahmedabad Airport pickup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Our Ahmedabad Airport taxi service includes flight tracking and terminal pickup for any destination in Gujarat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your drivers professional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All our drivers at Patel Cab Service are experienced, background-checked, and experts in highway navigation across India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to travel at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide 24/7 secure cab booking. Your safety is our priority, and our support team is always available during your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cancel my booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can call us directly on our mobile to modify or cancel your booking. We offer flexible cancellation policies."
+          }
+        }
+      ]
     }
-  }
+  ]
   </script>
 </head>
 
