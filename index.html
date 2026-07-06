@@ -100,7 +100,7 @@
   <nav id="navbar" aria-label="Main navigation">
     <div class="site-container">
       <div style="display:flex;align-items:center;justify-content:space-between">
-        <a href="#home" aria-label="Patel Cab Service Home" class="logo-parent">
+        <a href="index.html" aria-label="Patel Cab Service Home" class="logo-parent">
           <img src="img/PTEL-removebg2.webp" alt="Patel Cab Service Logo" style="height:52px;width:auto" />
         </a>
         <div class="desktop-nav" style="display:flex;align-items:center;gap:32px">
@@ -289,7 +289,8 @@
               <span id="toErr" style="display:none;color:#f87171;font-size:12px;margin-top:4px">Please select
                 destination.</span>
             </div>
-            <input class="form-input" type="text" id="bk-date" placeholder="Select Date & Time" readonly style="cursor:pointer" />
+            <input class="form-input" type="text" id="bk-date" placeholder="Select Date & Time" readonly
+              style="cursor:pointer" />
             <button class="btn-brand" type="submit"
               style="width:100%;padding:14px;font-size:15px;text-align:center">Confirm Cab Reservation →</button>
           </form>
@@ -1199,6 +1200,8 @@
           <a href="#routes" class="f-link">Popular Routes</a>
           <a href="#faq" class="f-link">FAQ</a>
           <a href="#contact" class="f-link">Contact</a>
+          <a href="taxi-service-ahmedabad.html" class="f-link">Ahmedabad Taxi Service</a>
+
         </div>
         <div>
           <h6
@@ -1274,28 +1277,28 @@
         const instance = flatpickr(selector, {
           monthSelectorType: 'dropdown',
           disableMobile: true,
-          onReady: function(selectedDates, dateStr, fpInstance) {
+          onReady: function (selectedDates, dateStr, fpInstance) {
             const container = fpInstance.calendarContainer;
             const currentMonthContainer = container.querySelector('.flatpickr-current-month');
-            
+
             // Build custom footer matching mockup layout
             const footer = document.createElement('div');
             footer.className = 'custom-fp-footer';
-            
+
             // Hours (01 - 12)
             let hoursHtml = '';
             for (let i = 1; i <= 12; i++) {
               const val = i < 10 ? '0' + i : i;
               hoursHtml += `<option value="${val}">${val}</option>`;
             }
-            
+
             // Minutes (00 - 55 in steps of 5)
             let minutesHtml = '';
             for (let i = 0; i < 60; i += 5) {
               const val = i < 10 ? '0' + i : i;
               minutesHtml += `<option value="${val}">${val}</option>`;
             }
-            
+
             footer.innerHTML = `
               <div class="fp-time-row">
                 <span class="fp-time-label">Time</span>
@@ -1329,13 +1332,13 @@
                 Cursor keys can navigate dates
               </div>
             `;
-            
+
             container.appendChild(footer);
-            
+
             const hourSelect = footer.querySelector('.hour-select');
             const minSelect = footer.querySelector('.minute-select');
             const ampmSelect = footer.querySelector('.ampm-select');
-            
+
             // Build custom animated overlay element inside calendar popup
             const overlay = document.createElement('div');
             overlay.className = 'fp-overlay-panel';
@@ -1347,16 +1350,16 @@
               <div class="overlay-content"></div>
             `;
             container.appendChild(overlay);
-            
+
             const overlayTitle = overlay.querySelector('.overlay-title');
             const overlayClose = overlay.querySelector('.overlay-close');
             const overlayContent = overlay.querySelector('.overlay-content');
-            
+
             const closeOverlay = () => {
               overlay.classList.remove('active');
             };
             overlayClose.addEventListener('click', closeOverlay);
-            
+
             // Add custom header container
             const customHeader = document.createElement('div');
             customHeader.className = 'custom-header-container';
@@ -1367,21 +1370,21 @@
               <button type="button" class="flatpickr-custom-header-btn custom-year-btn"></button>
             `;
             currentMonthContainer.appendChild(customHeader);
-            
+
             const customMonthBtn = customHeader.querySelector('.custom-month-btn');
             const customYearBtn = customHeader.querySelector('.custom-year-btn');
-            
+
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            
+
             const syncHeader = () => {
               customMonthBtn.textContent = shortMonths[fpInstance.currentMonth];
               customYearBtn.textContent = fpInstance.currentYear;
             };
-            
+
             fpInstance.customSyncHeader = syncHeader; // Save reference for event handlers
             syncHeader();
-            
+
             // Open Month overlay on click
             customMonthBtn.addEventListener('click', (e) => {
               e.stopPropagation();
@@ -1389,7 +1392,7 @@
               overlayContent.innerHTML = '';
               const grid = document.createElement('div');
               grid.className = 'month-grid';
-              
+
               months.forEach((m, idx) => {
                 const item = document.createElement('div');
                 item.className = 'overlay-item' + (fpInstance.currentMonth === idx ? ' selected' : '');
@@ -1404,7 +1407,7 @@
               overlayContent.appendChild(grid);
               overlay.classList.add('active');
             });
-            
+
             // Open Year overlay on click
             customYearBtn.addEventListener('click', (e) => {
               e.stopPropagation();
@@ -1412,7 +1415,7 @@
               overlayContent.innerHTML = '';
               const grid = document.createElement('div');
               grid.className = 'year-grid';
-              
+
               const currentYear = new Date().getFullYear();
               for (let y = currentYear - 2; y <= currentYear + 10; y++) {
                 const item = document.createElement('div');
@@ -1428,7 +1431,7 @@
               overlayContent.appendChild(grid);
               overlay.classList.add('active');
             });
-            
+
             // Event Listeners
             footer.querySelector('.today-btn').addEventListener('click', () => {
               const today = new Date();
@@ -1436,36 +1439,36 @@
               tempDate = today;
               syncHeader();
             });
-            
+
             footer.querySelector('.cancel-btn').addEventListener('click', () => {
               fpInstance.close();
             });
-            
+
             footer.querySelector('.apply-btn').addEventListener('click', () => {
               const currentSelected = fpInstance.selectedDates[0] || tempDate || new Date();
               const hh = hourSelect.value;
               const mm = minSelect.value;
               const ampm = ampmSelect.value;
-              
+
               const monthName = months[currentSelected.getMonth()];
               const day = currentSelected.getDate();
               const year = currentSelected.getFullYear();
-              
+
               inputEl.value = `${monthName} ${day}, ${year} ${hh}:${mm} ${ampm}`;
               fpInstance.close();
             });
           },
-          onOpen: function(selectedDates, dateStr, fpInstance) {
+          onOpen: function (selectedDates, dateStr, fpInstance) {
             tempDate = selectedDates[0] || new Date();
             const container = fpInstance.calendarContainer;
             const hourSelect = container.querySelector('.hour-select');
             const minSelect = container.querySelector('.minute-select');
             const ampmSelect = container.querySelector('.ampm-select');
-            
+
             if (fpInstance.customSyncHeader) {
               fpInstance.customSyncHeader();
             }
-            
+
             const val = inputEl.value;
             if (val) {
               const match = val.match(/(\d{2}):(\d{2})\s*(AM|PM)/i);
@@ -1476,12 +1479,12 @@
               }
             }
           },
-          onMonthChange: function(selectedDates, dateStr, fpInstance) {
+          onMonthChange: function (selectedDates, dateStr, fpInstance) {
             if (fpInstance.customSyncHeader) {
               fpInstance.customSyncHeader();
             }
           },
-          onYearChange: function(selectedDates, dateStr, fpInstance) {
+          onYearChange: function (selectedDates, dateStr, fpInstance) {
             if (fpInstance.customSyncHeader) {
               fpInstance.customSyncHeader();
             }

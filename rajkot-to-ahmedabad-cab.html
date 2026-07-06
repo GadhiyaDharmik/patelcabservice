@@ -104,7 +104,8 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <!-- Choices.js and Flatpickr CSS -->
-  <link class="choices-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <link class="choices-css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
 
@@ -303,7 +304,8 @@
               <span id="toErr" style="display:none;color:#f87171;font-size:12px;margin-top:4px">Please select
                 destination.</span>
             </div>
-            <input class="form-input" type="text" id="bk-date" placeholder="Select Date & Time" readonly style="cursor:pointer" />
+            <input class="form-input" type="text" id="bk-date" placeholder="Select Date & Time" readonly
+              style="cursor:pointer" />
             <button class="btn-brand" type="submit"
               style="width:100%;padding:14px;font-size:15px;text-align:center">Confirm Cab Reservation →</button>
           </form>
@@ -1212,6 +1214,8 @@
           <a href="index.html#routes" class="f-link">Popular Routes</a>
           <a href="index.html#faq" class="f-link">FAQ</a>
           <a href="index.html#contact" class="f-link">Contact</a>
+          <a href="taxi-service-ahmedabad.html" class="f-link">Ahmedabad Taxi Service</a>
+
         </div>
         <div>
           <h6
@@ -1287,27 +1291,27 @@
         const instance = flatpickr(selector, {
           monthSelectorType: 'dropdown',
           disableMobile: true,
-          onReady: function(selectedDates, dateStr, fpInstance) {
+          onReady: function (selectedDates, dateStr, fpInstance) {
             const container = fpInstance.calendarContainer;
-            
+
             // Build custom footer matching mockup layout
             const footer = document.createElement('div');
             footer.className = 'custom-fp-footer';
-            
+
             // Hours (01 - 12)
             let hoursHtml = '';
             for (let i = 1; i <= 12; i++) {
               const val = i < 10 ? '0' + i : i;
               hoursHtml += `<option value="${val}">${val}</option>`;
             }
-            
+
             // Minutes (00 - 55 in steps of 5)
             let minutesHtml = '';
             for (let i = 0; i < 60; i += 5) {
               const val = i < 10 ? '0' + i : i;
               minutesHtml += `<option value="${val}">${val}</option>`;
             }
-            
+
             footer.innerHTML = `
               <div class="fp-time-row">
                 <span class="fp-time-label">Time</span>
@@ -1341,80 +1345,80 @@
                 Cursor keys can navigate dates
               </div>
             `;
-            
+
             container.appendChild(footer);
-            
+
             const hourSelect = footer.querySelector('.hour-select');
             const minSelect = footer.querySelector('.minute-select');
             const ampmSelect = footer.querySelector('.ampm-select');
-            
+
             // Event Listeners
             footer.querySelector('.today-btn').addEventListener('click', () => {
               const today = new Date();
               fpInstance.setDate(today, true);
               tempDate = today;
-              
+
               // Sync Year dropdown value
               const yearSelect = container.querySelector('.flatpickr-year-select');
               if (yearSelect) {
                 yearSelect.value = today.getFullYear();
               }
             });
-            
+
             footer.querySelector('.cancel-btn').addEventListener('click', () => {
               fpInstance.close();
             });
-            
+
             footer.querySelector('.apply-btn').addEventListener('click', () => {
               const currentSelected = fpInstance.selectedDates[0] || tempDate || new Date();
               const hh = hourSelect.value;
               const mm = minSelect.value;
               const ampm = ampmSelect.value;
-              
+
               const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
               const monthName = months[currentSelected.getMonth()];
               const day = currentSelected.getDate();
               const year = currentSelected.getFullYear();
-              
+
               inputEl.value = `${monthName} ${day}, ${year} ${hh}:${mm} ${ampm}`;
               fpInstance.close();
             });
-            
+
             // Replace the Year input wrapper with a select dropdown
             const numInputWrapper = container.querySelector('.numInputWrapper');
             if (numInputWrapper) {
               const currentYear = new Date().getFullYear();
               const yearSelect = document.createElement('select');
               yearSelect.className = 'flatpickr-year-select';
-              
+
               let yearsHtml = '';
               for (let y = currentYear - 2; y <= currentYear + 10; y++) {
                 yearsHtml += `<option value="${y}">${y}</option>`;
               }
               yearSelect.innerHTML = yearsHtml;
               yearSelect.value = fpInstance.currentYear;
-              
+
               yearSelect.addEventListener('change', (e) => {
                 fpInstance.changeYear(parseInt(e.target.value));
               });
-              
+
               numInputWrapper.innerHTML = '';
               numInputWrapper.appendChild(yearSelect);
             }
           },
-          onOpen: function(selectedDates, dateStr, fpInstance) {
+          onOpen: function (selectedDates, dateStr, fpInstance) {
             tempDate = selectedDates[0] || new Date();
             const container = fpInstance.calendarContainer;
             const hourSelect = container.querySelector('.hour-select');
             const minSelect = container.querySelector('.minute-select');
             const ampmSelect = container.querySelector('.ampm-select');
             const yearSelect = container.querySelector('.flatpickr-year-select');
-            
+
             // Sync Year select
             if (yearSelect) {
               yearSelect.value = fpInstance.currentYear;
             }
-            
+
             const val = inputEl.value;
             if (val) {
               const match = val.match(/(\d{2}):(\d{2})\s*(AM|PM)/i);
@@ -1425,13 +1429,13 @@
               }
             }
           },
-          onMonthChange: function(selectedDates, dateStr, fpInstance) {
+          onMonthChange: function (selectedDates, dateStr, fpInstance) {
             const yearSelect = fpInstance.calendarContainer.querySelector('.flatpickr-year-select');
             if (yearSelect) {
               yearSelect.value = fpInstance.currentYear;
             }
           },
-          onYearChange: function(selectedDates, dateStr, fpInstance) {
+          onYearChange: function (selectedDates, dateStr, fpInstance) {
             const yearSelect = fpInstance.calendarContainer.querySelector('.flatpickr-year-select');
             if (yearSelect) {
               yearSelect.value = fpInstance.currentYear;
