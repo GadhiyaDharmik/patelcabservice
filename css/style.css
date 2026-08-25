@@ -250,10 +250,22 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.btn-outline svg {
+  transition: stroke .3s ease, fill .3s ease;
+}
+
 .btn-outline:hover {
   background: #fdc501;
   color: #1a1c1e;
   transform: translateY(-2px);
+}
+
+.btn-outline:hover svg {
+  stroke: #1a1c1e !important;
+}
+
+.btn-outline:hover svg path {
+  stroke: #1a1c1e !important;
 }
 
 /* Form controls */
