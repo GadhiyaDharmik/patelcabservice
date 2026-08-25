@@ -1519,6 +1519,7 @@
     // Booking form
     document.getElementById('reservationForm').addEventListener('submit', function (e) {
       e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
       const name = document.getElementById('bk-name').value.trim();
       const phone = document.getElementById('bk-phone').value.trim();
       const from = document.getElementById('bk-from').value;
@@ -1530,17 +1531,42 @@
       show('fromErr', !!from);
       show('toErr', !!to);
       if (valid) {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Processing...';
+        }
         const msg = `Hi, I would like to book a cab.%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AFrom: ${encodeURIComponent(from)}%0ATo: ${encodeURIComponent(to)}`;
         window.open(`https://wa.me/+919879677359?text=${msg}`, '_blank');
+        setTimeout(function () {
+          window.location.href = window.location.protocol === 'file:' ? 'thank-you.html' : '/thank-you';
+        }, 300);
       }
     });
 
     // Contact form
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
       const d = new FormData(this);
-      const msg = `Hi, I have a query.%0AName: ${encodeURIComponent(d.get('name'))}%0AEmail: ${encodeURIComponent(d.get('email'))}%0APhone: ${encodeURIComponent(d.get('number'))}%0AMessage: ${encodeURIComponent(d.get('message'))}`;
+      const name = (d.get('name') || '').toString().trim();
+      const email = (d.get('email') || '').toString().trim();
+      const number = (d.get('number') || '').toString().trim();
+      const message = (d.get('message') || '').toString().trim();
+
+      if (!name || !email || !number || !message) {
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      const msg = `Hi, I have a query.%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(number)}%0AMessage: ${encodeURIComponent(message)}`;
       window.open(`https://wa.me/+919879677359?text=${msg}`, '_blank');
+      setTimeout(function () {
+        window.location.href = window.location.protocol === 'file:' ? 'thank-you.html' : '/thank-you';
+      }, 300);
     });
   </script>
 
