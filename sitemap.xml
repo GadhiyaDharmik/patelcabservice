@@ -60,5 +60,11 @@
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://patelcabservice.com/privacy-policy.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
 
