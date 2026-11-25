@@ -2,69 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://patelcabservice.com/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://patelcabservice.com/about.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/services.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/contact.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/index.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/ahmedabad-to-rajkot-travel-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/ahmedabad-to-dwarka-road-trip-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/ahmedabad-to-somnath-travel-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/ahmedabad-to-surat-road-trip-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/ahmedabad-airport-pickup-drop-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/best-places-to-visit-in-gujarat.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/gujarat-family-road-trip-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/choose-right-taxi-outstation-travel.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/one-way-vs-round-trip-taxi-booking.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/travel-guides/booking-cab-in-ahmedabad-guide.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://patelcabservice.com/ahmedabad-to-rajkot-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/ahmedabad-to-surat-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/ahmedabad-to-vadodara-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/ahmedabad-to-jamnagar-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/rajkot-to-ahmedabad-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/rajkot-to-somnath-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/ahmedabad-to-dwarka-cab.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/taxi-service-ahmedabad.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/ahmedabad-to-baroda-taxi.html</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://patelcabservice.com/privacy-policy.html</loc>
-    <lastmod>2026-09-02</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/terms-and-conditions.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/cancellation-refund-policy.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://patelcabservice.com/disclaimer.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
-
